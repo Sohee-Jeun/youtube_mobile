@@ -28,6 +28,7 @@
 body {
   font-family: Roboto;
 }
+
 ul {
   list-style: none;
 }
@@ -39,6 +40,8 @@ button:focus {
   outline: none;
   background-color: var(--white-color);
 }
+
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -62,7 +65,7 @@ header .icons .fa-search {
 /* Video Player */
 .player {
   position: sticky;
-  top: 0;
+  top: 0; /*from where?*/
   text-align: center;
   background-color: var(--black-color);
 }
@@ -97,6 +100,7 @@ body > .info {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  margin-right: var(--padding);
 }
 
 .info .metadata .titleAndButton .moreBtn {
@@ -112,26 +116,31 @@ body > .info {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
 }
+/* Action Buttons */
 .info .actions {
   display: flex;
   justify-content: space-around;
   margin: var(--padding) 0;
 }
+
 .info .actions button {
   display: flex;
   flex-direction: column;
   font-size: var(--font-small);
   color: var(--grey-dark-color);
 }
+
 .info .actions button i {
   margin: 0 auto;
   margin-bottom: calc(var(--padding) / 2);
   font-size: 16px;
 }
-.actions button i.active {
+
+.info .actions button i.active {
   color: var(--blue-color);
 }
 
+/* Channel Description */
 .channel {
   display: flex;
   justify-content: space-between;
@@ -143,18 +152,22 @@ body > .info {
   display: flex;
   align-items: center;
 }
+
 .channel .metadata img {
   width: var(--avatar-size);
   height: var(--avatar-size);
   border-radius: 50%;
 }
+
 .channel .metadata .info {
   display: flex;
   flex-direction: column;
 }
+
 .channel .metadata .info .name {
   font-size: var(--font-medium);
 }
+
 .channel .metadata .info .subscribers {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
@@ -173,6 +186,7 @@ body > .info {
 }
 
 .UpNext > .title {
+  /* it adjust right after UpNest title. child > */
   font-size: var(--font-medium);
   color: var(--grey-dark-color);
   margin-bottom: (calc(var(--padding)) / 2);
@@ -193,6 +207,7 @@ body > .info {
 }
 .UpNext .item .info {
   flex: 1 1 60%;
+  flex-direction: column;
 }
 .UpNext .item .moreBtn {
   flex: 1 1 5%;
